@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+<H1> PROGRAMA PARA CALCULAR LOS PUNTOS DE UN EQUIPO DE FUTBOL </H1>
+<script>
+	//Código más resumido al anterior 
+	//Funciones objetivas
+document.write("<h3>Uso de variables </h3>");
+function saltarline(){
+    document.write("<br>");
+    document.write("<br>");
+    document.write("<br>");
+}
+function imprimir(frase){
+	document.write(frase);
+	saltarline();
+}
+
+var victorias=parseInt(prompt("informe la cantidad de victorias"));
+var empates=parseInt(prompt("informe la cantidad de empates"));
+
+var puntosTotal=victorias*3+empates;
+
+imprimir("El total de puntos de equipo es: "+puntosTotal)
+
+</script> 
