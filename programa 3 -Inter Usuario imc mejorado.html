@@ -1,0 +1,48 @@
+<meta charset="UTF-8">
+<H1> PROGRAMA IMC </H1>
+<script>
+	//Código más resumido al anterior 
+	//Funciones objetivas
+document.write("<h3>Uso de variables </h3>");
+function saltarline(){
+    document.write("<br>");
+    document.write("<br>");
+    document.write("<br>");
+}
+function imprimir(frase){
+	document.write(frase);
+	saltarline();
+}
+
+function calcularIMC(peso,altura)
+{
+    return(peso/(altura*altura));
+}
+nombre = prompt("informe su nombre: ");
+pesoInformado=prompt(nombre + " informe su peso: ");
+alturaInformada=prompt(nombre + " informe su altura:" );
+
+imcCalculado=calcularIMC(pesoInformado,alturaInformada);
+
+imprimir(nombre + " El IMC calculado es: "+imcCalculado);
+
+if(imcCalculado<18.5){
+	imprimir(nombre + " Su clasificación del IMC está en un nivel insuficiente, cuide su salud!");
+}
+if(imcCalculado>=18.5){
+	if (imcCalculado<25){
+	imprimir(nombre + " Su clasificación del IMC está en un nivel normal, sigue así!!!");
+	}
+}
+if(imcCalculado>=25){
+	if (imcCalculado<30){
+	imprimir(nombre + " Su clasificación del IMC está en un nivel de sobrepeso, OJO!!!");
+	}
+}
+
+if(imcCalculado>=30.0){
+	imprimir(nombre + " Su clasificación del IMC está en un nivel de obeso, haga ejercicio!!!");
+}
+
+
+</script> 
